@@ -25,6 +25,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/public/system" />
       <excludeFolder url="file://$MODULE_DIR$/components" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -32,6 +33,10 @@
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, RVM: ruby-3.1.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.1.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, RVM: ruby-3.1.1 [global]) [gem]" level="application" />
+  </component>
+  <component name="RModuleSettingsStorage">
+    <LOAD_PATH number="0" />
+    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
   </component>
   <component name="RailsGeneratorsCache">
     <option name="generators">
@@ -107,6 +112,11 @@
         <option value="test_unit:plugin" />
         <option value="test_unit:scaffold" />
       </list>
+    </option>
+  </component>
+  <component name="RakeTasksCache">
+    <option name="myRootTask">
+      <RakeTaskImpl id="rake" />
     </option>
   </component>
 </module>

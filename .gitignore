@@ -38,3 +38,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Igonre for RubyMine
+*.iml
+.idea/
+*.ipr
+*.iws

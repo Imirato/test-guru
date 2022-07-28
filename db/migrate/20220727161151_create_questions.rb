@@ -3,7 +3,8 @@
 class CreateQuestions < ActiveRecord::Migration[6.1]
   def change
     create_table :questions do |t|
-      t.text :body
+      t.text :body, null: false
+      t.belongs_to :test
 
       t.timestamps
     end

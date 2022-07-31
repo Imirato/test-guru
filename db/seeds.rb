@@ -6,3 +6,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user_1 = User.create(name: 'Анна', email: 'anna@gmail.com', password: '12345')
+user_2 = User.create(name: 'Саша', email: 'sasha@yandex.ru', password: '54321')
+
+category_1 = Category.create(title: 'Основы Ruby')
+category_2 = Category.create(title: 'Основы HTML5')
+
+test_1 = Test.create(title: 'Основы Ruby. Начальный уровень', level: 0, category_id: category_1.id)
+test_2 = Test.create(title: 'Основы HTML5. Начальный уровень', level: 1, category_id: category_2.id)
+
+question_1 = Question.create(body: 'Как называется самый популярный фреймворк языка Ruby для веба?', test_id: test_1.id)
+question_2 = Question.create(body: 'Чем отличается puts от print?', test_id: test_1.id)
+question_3 = Question.create(body: 'Для чего используется тег pre?', test_id: test_2.id)
+question_4 = Question.create(body: 'Какой тег не существует в HTML?', test_id: test_2.id)
+
+answer_1 = Answer.create(body: 'Ruby Web', question_id: question_1.id)
+answer_2 = Answer.create(body: 'RoR', correct: true, question_id: question_1.id)
+answer_3 = Answer.create(body: 'Ничем, оба делают одно и тоже', question_id: question_2.id)
+answer_4 = Answer.create(body: 'print без пропуска строки, а puts с пропуском', correct: true, question_id: question_2.id)
+answer_5 = Answer.create(body: 'Используется для вывода аббревиатуры', question_id: question_3.id)
+answer_6 = Answer.create(body: 'Используется для вывода программного кода', correct: true, question_id: question_3.id)
+answer_7 = Answer.create(body: 'mark', question_id: question_4.id)
+answer_8 = Answer.create(body: 'navigation', correct: true, question_id: question_4.id)
+
+UsersTest.create(user_id: user_1.id, test_id: test_2.id, status: 1)
+UsersTest.create(user_id: user_1.id, test_id: test_1.id, status: 0)
+UsersTest.create(user_id: user_2.id, test_id: test_1.id, status: 1)
+UsersTest.create(user_id: user_2.id, test_id: test_2.id, status: 0)

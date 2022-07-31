@@ -4,7 +4,7 @@ class CreateQuestions < ActiveRecord::Migration[6.1]
   def change
     create_table :questions do |t|
       t.text :body, null: false
-      t.belongs_to :test
+      t.belongs_to :test, foreign_key: true
 
       t.timestamps
     end

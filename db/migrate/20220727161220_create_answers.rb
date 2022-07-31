@@ -5,7 +5,7 @@ class CreateAnswers < ActiveRecord::Migration[6.1]
     create_table :answers do |t|
       t.text :body, null: false
       t.boolean :correct, null: false, default: false
-      t.belongs_to :question
+      t.belongs_to :question, foreign_key: true
 
       t.timestamps
     end

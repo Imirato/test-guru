@@ -13,8 +13,8 @@ user_2 = User.create(name: 'Саша', email: 'sasha@yandex.ru', password: '5432
 category_1 = Category.create(title: 'Основы Ruby')
 category_2 = Category.create(title: 'Основы HTML5')
 
-test_1 = Test.create(title: 'Основы Ruby. Начальный уровень', level: 0, category_id: category_1.id)
-test_2 = Test.create(title: 'Основы HTML5. Начальный уровень', level: 1, category_id: category_2.id)
+test_1 = Test.create(title: 'Основы Ruby. Начальный уровень', level: 0, category_id: category_1.id, author_id: user_1.id)
+test_2 = Test.create(title: 'Основы HTML5. Начальный уровень', level: 1, category_id: category_2.id, author_id: user_2.id)
 
 question_1 = Question.create(body: 'Как называется самый популярный фреймворк языка Ruby для веба?', test_id: test_1.id)
 question_2 = Question.create(body: 'Чем отличается puts от print?', test_id: test_1.id)
@@ -30,7 +30,7 @@ answer_6 = Answer.create(body: 'Используется для вывода п�
 answer_7 = Answer.create(body: 'mark', question_id: question_4.id)
 answer_8 = Answer.create(body: 'navigation', correct: true, question_id: question_4.id)
 
-UsersTest.create(user_id: user_1.id, test_id: test_2.id, status: 1)
-UsersTest.create(user_id: user_1.id, test_id: test_1.id, status: 0)
-UsersTest.create(user_id: user_2.id, test_id: test_1.id, status: 1)
-UsersTest.create(user_id: user_2.id, test_id: test_2.id, status: 0)
+TestsUser.create(user_id: user_1.id, test_id: test_2.id, status: 1)
+TestsUser.create(user_id: user_1.id, test_id: test_1.id, status: 0)
+TestsUser.create(user_id: user_2.id, test_id: test_1.id, status: 1)
+TestsUser.create(user_id: user_2.id, test_id: test_2.id, status: 0)

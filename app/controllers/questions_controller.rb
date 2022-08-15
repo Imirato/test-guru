@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test
+  before_action :find_test, except: %i[show]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -18,7 +18,11 @@ class QuestionsController < ApplicationController
   def create
     question = @test.questions.create(question_params)
 
-    render plain: question.inspect
+    if question.save
+      render plain: question.inspect
+    else
+      render plain: 'Введены неверные данные'
+    end
   end
 
   def destroy
@@ -32,8 +36,7 @@ class QuestionsController < ApplicationController
   end
 
   def find_question
-    @question = @test.questions.order(:id)[params[:id].to_i - 1]
-    raise ActiveRecord::RecordNotFound unless @question
+    @question = Question.find(params[:id])
   end
 
   def question_params

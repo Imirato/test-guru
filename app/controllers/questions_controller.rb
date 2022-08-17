@@ -1,32 +1,40 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, except: %i[show destroy]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[new create]
+  before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render plain: @test.questions.inspect
+  def show; end
+
+  def new
+    @question = @test.questions.new
   end
 
-  def show
-    render plain: @question.inspect
-  end
-
-  def new; end
+  def edit; end
 
   def create
-    question = @test.questions.create(question_params)
+    @question = @test.questions.new(question_params)
 
-    if question.save
-      render plain: question.inspect
+    if @question.save
+      redirect_to @question.test
     else
-      render plain: 'Введены неверные данные'
+      render :new
     end
   end
 
   def destroy
     @question.delete
+
+    redirect_to @question.test
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question.test
+    else
+      render :edit
+    end
   end
 
   private

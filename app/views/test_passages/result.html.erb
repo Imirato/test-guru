@@ -1,0 +1,9 @@
+<span class="<%= successful_passage?(@test_passage) ? 'success-test-passage' : 'failed-test-passage' %>">
+<h1><%= successful_passage?(@test_passage) ? 'Тест успешно пройден!' : 'Тест не пройден!' %> </h1>
+</span>
+
+<h2>Процент правильных ответов - <%= result_percent(@test_passage) %>%</h2>
+
+<p>
+  <%= link_to 'Вернуться с списку тестов', tests_path %>
+</p>

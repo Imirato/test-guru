@@ -30,7 +30,7 @@ answer_6 = Answer.create(body: 'Используется для вывода п�
 answer_7 = Answer.create(body: 'mark', question_id: question_4.id)
 answer_8 = Answer.create(body: 'navigation', correct: true, question_id: question_4.id)
 
-TestsUser.create(user_id: user_1.id, test_id: test_2.id, status: 1)
-TestsUser.create(user_id: user_1.id, test_id: test_1.id, status: 0)
-TestsUser.create(user_id: user_2.id, test_id: test_1.id, status: 1)
-TestsUser.create(user_id: user_2.id, test_id: test_2.id, status: 0)
+# TestsUser.create(user_id: user_1.id, test_id: test_2.id, status: 1)
+# TestsUser.create(user_id: user_1.id, test_id: test_1.id, status: 0)
+# TestsUser.create(user_id: user_2.id, test_id: test_1.id, status: 1)
+# TestsUser.create(user_id: user_2.id, test_id: test_2.id, status: 0)

@@ -5,16 +5,13 @@ class AnswersController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
-  def show
-
-  end
+  def show; end
 
   def new
     @answer = @question.answers.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @answer = @question.answers.new(answer_params)
@@ -29,7 +26,7 @@ class AnswersController < ApplicationController
   def update
     if @answer.update(answer_params)
       redirect_to @answer.question
-      else
+    else
       render :edit
     end
   end

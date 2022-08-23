@@ -1,9 +1,12 @@
 class TestPassage < ApplicationRecord
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
+
+  MINIMUM_RESULT = 85
 
   def completed?
     current_question.nil?
@@ -19,6 +22,15 @@ class TestPassage < ApplicationRecord
   def current_question_number
     test.questions.index(current_question) + 1
   end
+
+  def result_percent
+    correct_questions / test.questions.count * 100
+  end
+
+  def successful_passage?
+    result_percent >= MINIMUM_RESULT
+  end
+
 
   private
 

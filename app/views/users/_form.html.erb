@@ -1,0 +1,28 @@
+<%= form_with model: @user, local: true do |form| %>
+  <%= render 'shared/errors', resource: @user %>
+
+  <p>
+    <%= form.label 'Имя' %><br>
+    <%= form.text_field :name, id: :user_name %>
+  </p>
+
+  <p>
+    <%= form.label 'Email' %>><br>
+    <%= form.text_field :email, id: :user_email %>
+  </p>
+  <br>
+
+  <p>
+    <%= form.label 'Пароль' %>><br>
+    <%= form.password_field :password, id: :user_password %>
+  </p>
+  <br>
+
+  <p>
+    <%= form.label 'Подтверждение пароля' %>><br>
+    <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
+  </p>
+  <br>
+
+  <p><%= form.submit value = 'Применить' %></p>
+<% end %>

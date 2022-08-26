@@ -2,9 +2,6 @@
 
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-  get 'users/new'
-
   get :signup, to: 'users#new'
   get :login, to: 'sessions#new'
   delete :logout, to: 'sessions#destroy'

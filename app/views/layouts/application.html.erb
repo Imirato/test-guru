@@ -11,6 +11,16 @@
 </head>
 
 <body>
+<% if logged_in? %>
+  <p class="nav user">Добро пожаловать, Гуру <b><%= current_user.name %></b></p>
+  <%= button_to 'Выйти из системы', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Регистрация', signup_path %>
+  <%= link_to 'Вход', login_path %>
+<% end %>
+
+<h1><%= link_to 'TestGuru', tests_path %></h1>
+
 <%= yield %>
 
 <%= render 'layouts/footer' %>

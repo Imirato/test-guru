@@ -7,8 +7,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_1 = User.create(name: 'Анна', email: 'anna@gmail.com', password: '12345')
-user_2 = User.create(name: 'Саша', email: 'sasha@yandex.ru', password: '54321')
+user_1 = User.create(name: 'Анна', email: 'anna@gmail.com', password: '12345', password_confirmation: '12345')
+user_2 = User.create(name: 'Саша', email: 'sasha@yandex.ru', password: '54321', password_confirmation: '54321')
 
 category_1 = Category.create(title: 'Основы Ruby')
 category_2 = Category.create(title: 'Основы HTML5')

@@ -12,11 +12,13 @@
 
 <body>
 <% if user_signed_in? %>
-  <p class="nav user">Добро пожаловать, Гуру <b><%= current_user.name %></b></p>
-  <%= button_to 'Выйти из системы', destroy_user_session_path, method: :delete %>
+  <p class="nav user">
+    Добро пожаловать, Гуру <b><%= current_user.email %></b> |
+    <%= link_to 'Выйти из системы', destroy_user_session_path, method: :delete %>
+  </p>
 <% end %>
 
-<h1><%= link_to 'TestGuru', root_path %></h1>\
+<h1><%= link_to 'TestGuru', root_path %></h1>
 
 <%= render 'shared/flash' %>
 

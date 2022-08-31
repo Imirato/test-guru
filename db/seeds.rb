@@ -7,14 +7,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_1 = User.create(name: 'Анна', email: 'anna@gmail.com', password: '12345', password_confirmation: '12345')
-user_2 = User.create(name: 'Саша', email: 'sasha@yandex.ru', password: '54321', password_confirmation: '54321')
+user_1 = User.create(first_name: 'Anna', last_name: 'Smirnova', email: 'anna@gmail.com',
+                     password: '123456', password_confirmation: '123456', type: 'Admin')
+user_1.confirm
+user_2 = User.create(first_name: 'Sasha', last_name: 'Ivanov', email: 'sasha@yandex.ru',
+                     password: '654321', password_confirmation: '654321')
+user_2.confirm
 
 category_1 = Category.create(title: 'Основы Ruby')
 category_2 = Category.create(title: 'Основы HTML5')
 
 test_1 = Test.create(title: 'Основы Ruby. Начальный уровень', level: 0, category_id: category_1.id, author_id: user_1.id)
-test_2 = Test.create(title: 'Основы HTML5. Начальный уровень', level: 1, category_id: category_2.id, author_id: user_2.id)
+test_2 = Test.create(title: 'Основы HTML5. Начальный уровень', level: 1, category_id: category_2.id, author_id: user_1.id)
 
 question_1 = Question.create(body: 'Как называется самый популярный фреймворк языка Ruby для веба?', test_id: test_1.id)
 question_2 = Question.create(body: 'Чем отличается puts от print?', test_id: test_1.id)

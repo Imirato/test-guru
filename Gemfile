@@ -48,6 +48,8 @@ group :development do
   gem 'spring'
 
   gem 'pry', '~> 0.13.1'
+
+  gem 'letter_opener'
 end
 
 group :test do
@@ -63,3 +65,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # RuboCop is a Ruby static code analyzer (a.k.a. linter) and code formatter.
 gem 'rubocop', require: false
+
+gem 'net-smtp', require: false

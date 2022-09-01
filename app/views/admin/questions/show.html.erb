@@ -1,0 +1,29 @@
+<p>
+  <strong><%= @question.body %></strong>
+</p>
+
+<div>
+  <table>
+    <tr>
+      <th>Варианты ответов:</th>
+    </tr>
+    <% @question.answers.each do |answer| %>
+      <tr>
+        <td>
+          <li><%= link_to answer.body, admin_answer_path(answer) %></li>
+        </td>
+        <td><%= link_to 'Редактировать', edit_admin_answer_path(answer) %></td>
+        <td><%= link_to 'Удалить',
+                        admin_answer_path(answer),
+                        method: :delete,
+                        data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<p>
+  <%= link_to 'Создать новый ответ', new_admin_question_answer_path(@question) %>
+</p>
+
+<%= link_to 'Вернуться к тесту', admin_test_path(@question.test) %>

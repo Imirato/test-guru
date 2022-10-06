@@ -1,10 +1,10 @@
 <p>
-  <strong>Название:</strong>
+  <strong><%= t('.title') %>:</strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Уровень:</strong>
+  <strong><%= t('.level') %>:</strong>
   <%= @test.level %>
 </p>
 
@@ -12,15 +12,15 @@
 
   <table>
     <tr>
-      <th>Список вопросов теста:</th>
+      <th><%= t('.questions_list') %>:</th>
     </tr>
     <% @test.questions.each do |question| %>
       <tr>
         <td>
           <li><%= link_to question.body, admin_question_path(question) %></li>
         </td>
-        <td><%= link_to 'Редактировать', edit_admin_question_path(question) %></td>
-        <td><%= link_to 'Удалить',
+        <td><%= link_to t('links.update'), edit_admin_question_path(question) %></td>
+        <td><%= link_to t('links.delete'),
                         admin_question_path(question),
                         method: :delete,
                         data: { confirm: 'Вы уверены?' } %></td>
@@ -29,12 +29,12 @@
   </table>
 </div>
 
-<td><%= button_to 'Начать прохождение', start_test_path(@test) %></td>
+<td><%= button_to t('.start'), start_test_path(@test) %></td>
 
 <p>
-  <%= link_to 'Создать новый вопрос', new_admin_test_question_path(@test) %>
+  <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 </p>
 
 <p>
-  <%= link_to 'Вернуться с списку тестов', admin_tests_path %>
+  <%= link_to t('navigation.back'), admin_tests_path %>
 </p>

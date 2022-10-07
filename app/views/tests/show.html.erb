@@ -1,15 +1,15 @@
 <p>
-  <strong>Название:</strong>
+  <strong><%= t('.title') %>:</strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Уровень:</strong>
+  <strong><%= t('.level') %>:</strong>
   <%= @test.level %>
 </p>
 
-<td><%= button_to 'Начать прохождение', start_test_path(@test) %></td>
+<td><%= button_to t('.start'), start_test_path(@test) %></td>
 
 <p>
-  <%= link_to 'Вернуться с списку тестов', tests_path %>
+  <%= link_to t('navigation.back'), tests_path %>
 </p>

@@ -1,10 +1,10 @@
-<h1>Список тестов</h1>
+<h1><%= t('.header') %></h1>
 
 <table>
   <tr>
-    <th>Название</th>
-    <th>Уровень</th>
-    <th>Количество вопросов</th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions_quantity') %></th>
   </tr>
 
   <% @tests.each do |test| %>

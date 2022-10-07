@@ -1,10 +1,10 @@
-<h1>Список тестов</h1>
+<h1><%= t('.header') %></h1>
 
 <table>
   <tr>
-    <th>Название</th>
-    <th>Уровень</th>
-    <th>Количество вопросов</th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions_quantity') %></th>
   </tr>
 
   <% @tests.each do |test| %>
@@ -14,15 +14,15 @@
       </td>
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>
-      <td><%= link_to 'Редактировать', edit_admin_test_path(test) %></td>
-      <td><%= link_to 'Удалить',
+      <td><%= link_to t('links.update'), edit_admin_test_path(test) %></td>
+      <td><%= link_to t('links.delete'),
                       admin_test_path(test),
                       method: :delete,
-                      data: { confirm: 'Вы уверены?' } %></td>
+                      data: { confirm: t('confirmation.delete') } %></td>
     </tr>
   <% end %>
 </table>
 
 <p>
-  <%= link_to 'Создать новый тест', new_admin_test_path(@test) %>
+  <%= link_to t('links.create'), new_admin_test_path(@test) %>
 </p>

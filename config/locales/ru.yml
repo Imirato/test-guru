@@ -1,0 +1,65 @@
+ru:
+  hello: "Привет, мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  navigation:
+    back: "Назад"
+
+  links:
+    create: "Создать"
+    update: "Редактировать"
+    delete: "Удалить"
+
+  confirmation:
+    delete: "Вы уверены?"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+#    header:
+#      welcome: "Добро пожаловать"
+#      buttons:
+#        exit: "Выход"
+#      links:
+#        signup: "Регистрация"
+#        signin: "Логин"
+
+  tests:
+    index:
+      header: "Список тестов"
+      title: "Название"
+      level: "Уровень"
+      questions_quantity: "Количество вопросов"
+    show:
+      title: "Название"
+      level: "Уровень"
+      start: "Начать прохождение"
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Список тестов"
+        title: "Название"
+        level: "Уровень"
+        questions_quantity: "Количество вопросов"
+      show:
+        title: "Название"
+        level: "Уровень"
+        questions_list: "Список вопросов теста"
+        start: "Начать прохождение"
+        create_question: "Создать вопрос"

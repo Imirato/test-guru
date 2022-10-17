@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>TestGuru</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <title>TestGuru</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<body>
-<% if user_signed_in? %>
-  <p class="nav user">
-    Добро пожаловать, Гуру <b><%= current_user.email %></b> |
-    <%= link_to 'Выйти из системы', destroy_user_session_path, method: :delete %>
-  </p>
-<% end %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<h1><%= link_to 'TestGuru', root_path %></h1>
+  <body>
+  <%= render 'shared/nav' %>
 
-<%= render 'shared/flash' %>
+  <div class="container">
+    <%= render 'shared/flash' %>
+    <%= yield %>
+  </div>
 
-<%= yield %>
-
-<%= render 'layouts/footer' %>
-</body>
+  <%= render 'layouts/footer' %>
+  </body>
 </html>

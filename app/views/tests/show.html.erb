@@ -8,7 +8,7 @@
   <%= @test.level %>
 </p>
 
-<td><%= button_to t('.start'), start_test_path(@test) %></td>
+<td><%= button_to t('.start'), start_test_path(@test), class: "btn btn-primary"  %></td>
 
 <p>
   <%= link_to t('navigation.back'), tests_path %>

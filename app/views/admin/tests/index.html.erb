@@ -10,7 +10,7 @@
   <% @tests.each do |test| %>
     <tr>
       <td>
-        <li><%= link_to test.title, admin_test_path(test) %></li>
+        <%= link_to test.title, admin_test_path(test) %>
       </td>
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>

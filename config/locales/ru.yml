@@ -57,9 +57,8 @@ ru:
         start: "Начать прохождение"
         create_question: "Создать вопрос"
 
-  test_passages:
-    gist:
-      success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist'
-      failure: "Во время сохранения gists произошла ошибка"
+  gists:
+    success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist'
+    failure: "Во время сохранения gists произошла ошибка"
 
   gist_description: "Вопрос %{:test_title} из TestGuru"

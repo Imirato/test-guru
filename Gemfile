@@ -29,9 +29,6 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
-# NETWORKING
-gem 'faraday'
-
 # Github API
 gem "octokit", "~> 5.0"
 

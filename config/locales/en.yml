@@ -55,9 +55,8 @@ en:
         start: "Start passing"
         create_question: "Create a question"
 
-  test_passages:
-    gist:
-      success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
-      failure: "An error occurred while saving gists"
+  gists:
+    success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
+    failure: "An error occurred while saving gists"
 
   gist_description: "A question about %{:test_title} from TestGuru"

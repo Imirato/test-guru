@@ -1,0 +1,23 @@
+<h1>Созданные Gist</h1>
+
+<table>
+  <tr>
+    <th>Название вопроса</th>
+    <th>Ссылка на Gist</th>
+    <th>Email пользователя</th>
+  </tr>
+
+  <% @gists.each do |gist| %>
+    <tr>
+      <td>
+        <%= gist_question_link(gist) %>
+      </td>
+      <td><%= gist_link(gist) %></td>
+      <td><%= gist.user.email %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to t('navigation.back'), admin_tests_path %>
+</p>

@@ -28,16 +28,8 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
-#    header:
-#      welcome: "Welcome"
-#      buttons:
-#        exit: "Exit"
-#      links:
-#        signup: "Sign up"
-#        signin: "Log in"
 
   tests:
-
     index:
       header: "Available tests"
       title: "Title"
@@ -62,3 +54,9 @@ en:
         questions_list: "Test's questions list"
         start: "Start passing"
         create_question: "Create a question"
+
+  gists:
+    success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
+    failure: "An error occurred while saving gists"
+
+  gist_description: "A question about %{:test_title} from TestGuru"

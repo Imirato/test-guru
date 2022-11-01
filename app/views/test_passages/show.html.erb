@@ -1,7 +1,16 @@
 <h1>Прохождение теста: <%= @test_passage.test.title %></h1>
 
+<div class="progress mb-4">
+  <div
+      class="progress-bar bg-dark" role="progressbar"
+      style="width: <%= @test_passage.passing_progress %>%"
+      aria-valuenow="<%= @test_passage.passing_progress %>"
+      aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>
+
 <b>
-  <p> <%= "Вопрос #{@test_passage.current_question_number} / #{@test_passage.test.questions.count}: #{@test_passage.current_question.body}" %></p>
+  <p> <%= @test_passage.current_question.body %></p>
 </b>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>

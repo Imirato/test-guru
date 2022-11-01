@@ -1,12 +1,18 @@
 <h1 class="mb-3"><%= t('.header') %></h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
-    <th><%= t('.title') %></th>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
     <th><%= t('.level') %></th>
     <th><%= t('.questions_quantity') %></th>
   </tr>
-
+  </thead>
+  <tbody>
   <% @tests.each do |test| %>
     <tr>
       <td><%= link_to test.title, test_path(test) %></td>
@@ -14,4 +20,5 @@
       <td><%= test.questions.count %></td>
     </tr>
   <% end %>
+  </tbody>
 </table>

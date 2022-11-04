@@ -19,6 +19,7 @@ ru:
     create: "Создать"
     update: "Редактировать"
     delete: "Удалить"
+    show: "Показать"
 
   confirmation:
     delete: "Вы уверены?"
@@ -28,7 +29,7 @@ ru:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
-        one: "Обнаружено %{count} ошибка"
+        one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
   tests:

@@ -19,6 +19,7 @@ en:
     create: "Create"
     update: "Update"
     delete: "Delete"
+    show: "Show"
 
   confirmation:
     delete: "Are you sure?"

@@ -34,6 +34,9 @@
 <p>
   <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 </p>
+<p>
+  <%= link_to t('links.update'), edit_admin_test_path(@test)%>
+</p>
 
 <p>
   <%= link_to t('navigation.back'), admin_tests_path %>

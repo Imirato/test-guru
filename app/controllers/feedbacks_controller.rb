@@ -9,7 +9,6 @@ class FeedbacksController < ApplicationController
 
       redirect_to new_feedback_path
     else
-
       render :new
     end
   end

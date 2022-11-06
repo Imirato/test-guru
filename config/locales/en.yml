@@ -49,6 +49,7 @@ en:
         title: "Title"
         level: "Level"
         questions_quantity: "Quantity of questions"
+        visibility_status: "Test visibility"
       show:
         title: "Title"
         level: "Level"

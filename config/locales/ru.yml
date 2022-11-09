@@ -51,6 +51,7 @@ ru:
         title: "Название"
         level: "Уровень"
         questions_quantity: "Количество вопросов"
+        visibility_status: "Видимость теста"
       show:
         title: "Название"
         level: "Уровень"

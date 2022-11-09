@@ -1,0 +1,12 @@
+<h1 class="mb-4">
+  Форма обратной связи
+</h1>
+
+<%= form_with(scope: :contact_form, url: feedbacks_path, local: true) do |f| %>
+  <div class="mb-3">
+    <%= f.label :message, 'Текст сообщения' %>
+    <%= f.text_area :message, size: "70x5", class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Отправить', class: 'btn btn-primary' %>
+<% end %>

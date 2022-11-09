@@ -4,7 +4,7 @@ class TestsController < ApplicationController
   before_action :find_test, only: %i[show start]
 
   def index
-    @tests = Test.all
+    @tests = Test.visible
   end
 
   def show; end

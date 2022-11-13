@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: :Test, inverse_of: :author, foreign_key: :author_id
   has_many :gists, dependent: nil
+  has_many :badges, through: :badges_users
+  has_many :badges_users, dependent: destroy
 
   validates :first_name, :last_name, presence: true
 

@@ -11,6 +11,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      badge:
+        title: "Название"
+        image: "Имя файла с изображением"
 
   navigation:
     back: "Назад"
@@ -58,6 +61,13 @@ ru:
         questions_list: "Список вопросов теста"
         start: "Начать прохождение"
         create_question: "Создать вопрос"
+    badges:
+      create:
+        success: "Бейдж успешно создан."
+      index:
+        header: "Список наград"
+        title: "Название"
+        image: "Имя файла с изображением"
 
   gists:
     success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist'

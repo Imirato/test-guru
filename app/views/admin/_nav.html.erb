@@ -8,6 +8,9 @@
   <span class="nav-admin title">
     <%= link_to 'Созданные Gist', admin_gists_path %>
   </span>
+  <span class="nav-admin title">
+    <%= link_to 'Список наград', admin_badges_path %>
+  </span>
   <span class="navbar-text">
       Добро пожаловать, Гуру <b><%= current_user.email %></b> |
     <%= link_to 'Выйти из системы', destroy_user_session_path, method: :delete %>

@@ -11,6 +11,9 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      badge:
+        title: "Title"
+        image: "Name of the image file"
 
   navigation:
     back: "Back"
@@ -40,6 +43,11 @@ en:
       title: "Title"
       level: "Level"
       start: "Start passing"
+  badges:
+    index:
+      header: "Available badges"
+      title: "Title"
+      image: "Name of the image file"
   admin:
     tests:
       create:
@@ -56,6 +64,13 @@ en:
         questions_list: "Test's questions list"
         start: "Start passing"
         create_question: "Create a question"
+    badges:
+      create:
+        success: "Badge was successfully created."
+      index:
+        header: "Available badges"
+        title: "Title"
+        image: "Name of the image file"
 
   gists:
     success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'

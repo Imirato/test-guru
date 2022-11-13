@@ -1,0 +1,26 @@
+<h1><%= t('.header') %></h1>
+
+<%= render 'shared/errors', resource: @badge %>
+
+<table>
+  <tr>
+    <th><%= t('.title') %></th>
+    <th><%= t('.image') %></th>
+  </tr>
+
+  <% @badges.each do |badge| %>
+    <tr>
+      <td><%= badge.title %></td>
+      <td><%= badge.image %></td>
+      <td><%= link_to t('links.update'), edit_admin_badge_path(badge) %></td>
+      <td><%= link_to t('links.delete'),
+                      admin_badge_path(badge),
+                      method: :delete,
+                      data: { confirm: t('confirmation.delete') } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to t('links.create'), new_admin_badge_path(@badge) %>
+</p>

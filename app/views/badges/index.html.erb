@@ -2,7 +2,23 @@
 
 <%= render 'shared/errors', resource: @badge %>
 
-<table>
+<h3><%= t('.received_badges_header') %></h3>
+<table class="table">
+  <tr>
+    <th><%= t('.title') %></th>
+    <th><%= t('.image') %></th>
+  </tr>
+
+  <% current_user.badges.each do |badge| %>
+    <tr>
+      <td><%= badge.title %></td>
+      <td><img src="<%= badge.image%>" width="50" height="50"></td>
+    </tr>
+  <% end %>
+</table>
+
+<h3><%= t('.available_badges_header') %></h3>
+<table class="table">
   <tr>
     <th><%= t('.title') %></th>
     <th><%= t('.image') %></th>
@@ -11,7 +27,7 @@
   <% @badges.each do |badge| %>
     <tr>
       <td><%= badge.title %></td>
-      <td><%= badge.image %></td>
+      <td><img src="<%= badge.image%>" width="50" height="50"></td>
     </tr>
   <% end %>
 </table>

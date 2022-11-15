@@ -46,8 +46,10 @@ en:
   badges:
     index:
       header: "Available badges"
+      received_badges_header: "Received badges"
+      available_badges_header: "Available badges"
       title: "Title"
-      image: "Name of the image file"
+      image: "Image"
   admin:
     tests:
       create:
@@ -70,7 +72,7 @@ en:
       index:
         header: "Available badges"
         title: "Title"
-        image: "Name of the image file"
+        image: "Image"
 
   gists:
     success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'

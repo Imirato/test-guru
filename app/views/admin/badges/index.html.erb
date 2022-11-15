@@ -2,7 +2,7 @@
 
 <%= render 'shared/errors', resource: @badge %>
 
-<table>
+<table class="table">
   <tr>
     <th><%= t('.title') %></th>
     <th><%= t('.image') %></th>
@@ -11,7 +11,7 @@
   <% @badges.each do |badge| %>
     <tr>
       <td><%= badge.title %></td>
-      <td><%= badge.image %></td>
+      <td><img src="<%= badge.image%>" width="50" height="50"></td>
       <td><%= link_to t('links.update'), edit_admin_badge_path(badge) %></td>
       <td><%= link_to t('links.delete'),
                       admin_badge_path(badge),

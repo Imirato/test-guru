@@ -17,7 +17,7 @@ class BadgeIssuingService
   def first_successful_attempt(badge)
     return if @test.title != badge.object_title
 
-    give_badge(badge) if @user.test_passages.where(test: @test).count == 1 && @test_passage.successful_passage?
+    give_badge(badge) if @user.test_passages.where(test: @test).count == 1 && @test_passage.success?
   end
 
   def all_tests_by_category(badge)

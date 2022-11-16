@@ -5,6 +5,10 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
+  before_update :update_success_status
+
+  scope :succeed, -> { where(success: true) }
+  scope :failed, -> { where(success: false) }
 
   MINIMUM_RESULT = 85
 
@@ -55,5 +59,10 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def update_success_status
+    self.success = true if self.successful_passage?
+    save!
   end
 end

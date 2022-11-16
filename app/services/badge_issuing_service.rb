@@ -15,17 +15,18 @@ class BadgeIssuingService
   private
 
   def first_successful_attempt(badge)
-    return unless @test.title == badge.object_title
+    return if @test.title != badge.object_title
 
     give_badge(badge) if @user.test_passages.where(test: @test).count == 1 && @test_passage.successful_passage?
   end
 
   def all_tests_by_category(badge)
-    return unless badge.object_title == @category.title
+    return if badge.object_title != @category.title
 
-    all_successful_test_passages = TestPassage.where(user: @user, test: @category.tests)
-                                              .find_all(&:successful_passage?).map(&:test).uniq
-    give_badge(badge) if all_successful_test_passages == @category.tests.count
+    all_successful_tests = Test.joins(:test_passages).where(category: @category,
+                                                            test_passages: { success: true, user: @user }).distinct
+
+    give_badge(badge) if all_successful_tests == @category.tests.count
   end
 
   def give_badge(badge)

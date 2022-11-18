@@ -26,7 +26,7 @@ class BadgeIssuingService
     all_successful_tests = Test.joins(:test_passages).where(category: @category,
                                                             test_passages: { success: true, user: @user }).distinct
 
-    give_badge(badge) if all_successful_tests == @category.tests.count
+    give_badge(badge) if all_successful_tests.count == @category.tests.count
   end
 
   def give_badge(badge)

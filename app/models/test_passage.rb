@@ -63,6 +63,5 @@ class TestPassage < ApplicationRecord
 
   def update_success_status
     self.success = true if self.successful_passage?
-    save!
   end
 end

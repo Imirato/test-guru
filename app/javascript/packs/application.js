@@ -10,6 +10,7 @@ import "channels"
 import '../utilities/sorting'
 import '../utilities/registrating'
 import '../utilities/form_inline'
+import '../utilities/timer'
 
 Rails.start()
 Turbolinks.start()

@@ -32,12 +32,18 @@ class TestPassage < ApplicationRecord
   end
 
   def successful_passage?
-    result_percent >= MINIMUM_RESULT
+    result_percent >= MINIMUM_RESULT && !out_of_time?
   end
 
   def passing_progress
     questions_count = test.questions.order(:id).index(current_question)
     (questions_count.to_f / test.questions.count * 100).round
+  end
+
+  def out_of_time?
+    return false if test.passage_time.nil?
+
+    created_at + test.passage_time.minutes <= Time.zone.now
   end
 
   private
@@ -62,6 +68,6 @@ class TestPassage < ApplicationRecord
   end
 
   def update_success_status
-    self.success = true if self.successful_passage?
+    self.success = true if successful_passage?
   end
 end

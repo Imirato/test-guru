@@ -10,6 +10,7 @@
     </th>
     <th><%= t('.level') %></th>
     <th><%= t('.questions_quantity') %></th>
+    <th><%= t('.passage_time') %></th>
   </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
       <td><%= link_to test.title, test_path(test) %></td>
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>
+      <td><%= test.passage_time %></td>
     </tr>
   <% end %>
   </tbody>

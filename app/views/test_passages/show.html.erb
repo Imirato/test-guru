@@ -2,11 +2,17 @@
 
 <div class="progress mb-4">
   <div
-      class="progress-bar bg-dark" role="progressbar"
-      style="width: <%= @test_passage.passing_progress %>%"
-      aria-valuenow="<%= @test_passage.passing_progress %>"
-      aria-valuemin="0" aria-valuemax="100">
+    class="progress-bar bg-dark" role="progressbar"
+    style="width: <%= @test_passage.passing_progress %>%"
+    aria-valuenow="<%= @test_passage.passing_progress %>"
+    aria-valuemin="0" aria-valuemax="100">
   </div>
+</div>
+
+<div
+  id="passage_time" ,
+  class="row justify-content-center border rounded-pill">
+  <%= @closing_time.to_s if @test_passage.test.passage_time %>
 </div>
 
 <b>

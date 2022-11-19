@@ -11,6 +11,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        visibility_status: "Видимость теста"
+        passage_time: "Время на прохождение, мин."
       badge:
         title: "Название"
         image: "Имя файла с изображением"
@@ -41,10 +43,12 @@ ru:
       title: "Название"
       level: "Уровень"
       questions_quantity: "Количество вопросов"
+      passage_time: "Время на прохождение"
     show:
       title: "Название"
       level: "Уровень"
       start: "Начать прохождение"
+      passage_time: "Время на прохождение, мин."
   badges:
     create:
       success: "Бейдж успешно создан."
@@ -64,6 +68,7 @@ ru:
         level: "Уровень"
         questions_quantity: "Количество вопросов"
         visibility_status: "Видимость теста"
+        passage_time: "Время на прохождение, мин."
       show:
         title: "Название"
         level: "Уровень"

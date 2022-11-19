@@ -8,6 +8,11 @@
   <%= @test.level %>
 </p>
 
+<p>
+  <strong><%= t('.passage_time') %>:</strong>
+  <%= @test.passage_time %>
+</p>
+
 <td><%= button_to t('.start'), start_test_path(@test), class: "btn btn-primary"  %></td>
 
 <p>

@@ -17,7 +17,12 @@
   </p>
 
   <p>
-    <%= form.label 'Видимость теста' %><br>
+    <%= form.label :passage_time %>
+    <%= form.number_field :passage_time %>
+  </p>
+
+  <p>
+    <%= form.label :visibility_status %><br>
     <%= form.check_box :visibility_status %>
   </p>
 

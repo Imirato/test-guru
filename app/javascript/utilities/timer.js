@@ -15,8 +15,9 @@ const update = function() {
 
 const passage_time = function() {
     const timer = document.getElementById('passage_time')
-    const closingTime = timer.dataset.closing_time
+    const closingTime = timer.dataset.closingTime
     const difference = +new Date(closingTime) - +new Date()
+
     let remaining = 'Time is up!'
 
     if (difference > 0) {

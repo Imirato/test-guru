@@ -2,12 +2,13 @@
 
 <%= render 'shared/errors', resource: @test %>
 
-<table>
+<table class="table">
   <tr>
     <th><%= t('.title') %></th>
     <th><%= t('.level') %></th>
     <th><%= t('.questions_quantity') %></th>
     <th><%= t('.visibility_status') %></th>
+    <th><%= t('.passage_time') %></th>
   </tr>
 
   <% @tests.each do |test| %>
@@ -19,6 +20,7 @@
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>
       <td><%= test.visibility_status %></td>
+      <td><%= test.passage_time %></td>
       <td><%= link_to t('links.update'),
                       edit_admin_test_path(test),
                       data: { test_id: test.id },

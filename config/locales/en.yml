@@ -11,6 +11,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        visibility_status: "Test visibility"
+        passage_time: "Time to complete, min."
       badge:
         title: "Title"
         image: "Name of the image file"
@@ -39,10 +41,12 @@ en:
       title: "Title"
       level: "Level"
       questions_quantity: "Quantity of questions"
+      passage_time: "Time to complete"
     show:
       title: "Title"
       level: "Level"
       start: "Start passing"
+      passage_time: "Time to complete, min."
   badges:
     index:
       header: "Available badges"
@@ -60,6 +64,7 @@ en:
         level: "Level"
         questions_quantity: "Quantity of questions"
         visibility_status: "Test visibility"
+        passage_time: "Time to complete, min."
       show:
         title: "Title"
         level: "Level"

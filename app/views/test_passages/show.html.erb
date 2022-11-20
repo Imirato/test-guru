@@ -2,12 +2,14 @@
 
 <div class="progress mb-4">
   <div
-      class="progress-bar bg-dark" role="progressbar"
-      style="width: <%= @test_passage.passing_progress %>%"
-      aria-valuenow="<%= @test_passage.passing_progress %>"
-      aria-valuemin="0" aria-valuemax="100">
+    class="progress-bar bg-dark" role="progressbar"
+    style="width: <%= @test_passage.passing_progress %>%"
+    aria-valuenow="<%= @test_passage.passing_progress %>"
+    aria-valuemin="0" aria-valuemax="100">
   </div>
 </div>
+
+<%= timer(@closing_time.strftime("%F %T%z")) %>
 
 <b>
   <p> <%= @test_passage.current_question.body %></p>
@@ -22,5 +24,5 @@
   <% end %>
 
   <p><%= link_to 'Gist', test_passage_gists_path(@test_passage), method: :post %></p>
-  <p><%= form.submit 'Следующий вопрос' %></p>
+  <p><%= form.submit 'Следующий вопрос', id: 'next-question' %></p>
 <% end %>
